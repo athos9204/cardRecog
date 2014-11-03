@@ -3,4 +3,4 @@ set posNumber=%2
 set width=%3
 set height=%4
 
-opencv_createsamples -img ..\PNG-cards-1.3\%imageName% -num  %posNumber%  -vec positiveVector.vec -w %width% -h %height% -maxxangle 0.0 -maxyangle 0.0 -maxzangle  0.0
+opencv_createsamples -img %imageName% -num  %posNumber% -bg negatives.dat  -vec positiveVector.vec -w %width% -h %height% -maxxangle 1.1 -maxyangle 1.1 -maxzangle  0.5 -bgcolor 0.0 -bgthresh 0 -maxidev 40
