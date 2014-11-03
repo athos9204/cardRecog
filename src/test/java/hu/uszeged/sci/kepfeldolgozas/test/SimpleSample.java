@@ -76,12 +76,12 @@ class SimpleSample {
 //		System.out.println(SimpleSample.class.getResource("2_of_hearts.png"));
 		// File input = new
 		// File(SimpleSample.class.getResource("\\2_of_hearts.png").getPath().substring(1));
-		File input = new File("src/main/resources/2_of_hearts.png");
-//		File input = new File("src/main/resources/test_input.png");
+//		File input = new File("src/main/resources/2_of_hearts copy.png");
+		File input = new File("src/main/resources/test_input.png");
 		System.out.println(input.getPath());
 		System.out.println(input.isFile());
 
-		File cascadePath = new File("src/main/resources/haarcascade-inter.xml");
+		File cascadePath = new File("src/main/resources/haarcascade.xml");
 		System.out.println(cascadePath.getPath());
 		System.out.println(cascadePath.getAbsolutePath());
 		System.out.println(input.isFile());
@@ -97,8 +97,8 @@ class SimpleSample {
 
 		MatOfRect cardDecetions = new MatOfRect();
 
-		classifier.detectMultiScale(dst_image, cardDecetions, 1.1, 4, 0, new Size(
-				40, 58), new Size(2000, 3000));
+		classifier.detectMultiScale(dst_image, cardDecetions, 1.1, 20, 5, new Size(
+				40, 58), new Size(1000, 1000));
 //		 classifier.detectMultiScale(dst_image, cardDecetions);
 		System.out.println(String.format("Detected %s cards",
 				cardDecetions.toArray().length));
