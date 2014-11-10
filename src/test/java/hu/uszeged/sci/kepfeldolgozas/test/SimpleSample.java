@@ -4,7 +4,7 @@ import org.opencv.core.CvType;
 import org.opencv.core.Scalar;
 //teszt2
 class SimpleSample {
-
+//teszt
 	static {
 		System.loadLibrary("opencv_java249");
 	}
