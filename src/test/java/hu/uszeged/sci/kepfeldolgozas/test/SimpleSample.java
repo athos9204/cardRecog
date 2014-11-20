@@ -77,11 +77,11 @@ class SimpleSample {
 		// File input = new
 		// File(SimpleSample.class.getResource("\\2_of_hearts.png").getPath().substring(1));
 //		File input = new File("src/main/resources/2_of_hearts copy.png");
-		File input = new File("src/main/resources/test_input.png");
+		File input = new File("src/main/resources/queen_of_spades.png");
 		System.out.println(input.getPath());
 		System.out.println(input.isFile());
 
-		File cascadePath = new File("src/main/resources/haarcascade.xml");
+		File cascadePath = new File("src/main/resources/queen_of_spades.xml");
 		System.out.println(cascadePath.getPath());
 		System.out.println(cascadePath.getAbsolutePath());
 		System.out.println(input.isFile());
