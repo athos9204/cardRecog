@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<opencv_storage>
+<_7_of_clubs type_id="opencv-haar-classifier">
+  <size>
+    40 58</size>
+  <stages>
+    <_>
+      <!-- stage 0 -->
+      <trees>
+        <_>
+          <!-- tree 0 -->
+          <_>
+            <!-- root node -->
+            <feature>
+              <rects>
+                <_>
+                  8 11 12 7 -1.</_>
+                <_>
+                  12 15 4 7 3.</_></rects>
+              <tilted>1</tilted></feature>
+            <threshold>3.5719178617000580e-002</threshold>
+            <left_val>-1.</left_val>
+            <right_node>1</right_node></_>
+          <_>
+            <!-- node 1 -->
+            <feature>
+              <rects>
+                <_>
+                  0 0 2 1 -1.</_>
+                <_>
+                  1 0 1 1 2.</_></rects>
+              <tilted>0</tilted></feature>
+            <threshold>-3.5869859857484698e-004</threshold>
+            <left_val>0.</left_val>
+            <right_val>1.</right_val></_></_></trees>
+      <stage_threshold>1.</stage_threshold>
+      <parent>-1</parent>
+      <next>-1</next></_>
+    <_>
+      <!-- stage 1 -->
+      <trees>
+        <_>
+          <!-- tree 0 -->
+          <_>
+            <!-- root node -->
+            <feature>
+              <rects>
+                <_>
+                  7 30 20 21 -1.</_>
+                <_>
+                  7 37 20 7 3.</_></rects>
+              <tilted>0</tilted></feature>
+            <threshold>8.3599023520946503e-002</threshold>
+            <left_val>-1.</left_val>
+            <right_node>1</right_node></_>
+          <_>
+            <!-- node 1 -->
+            <feature>
+              <rects>
+                <_>
+                  0 0 16 34 -1.</_>
+                <_>
+                  0 0 8 17 2.</_>
+                <_>
+                  8 17 8 17 2.</_></rects>
+              <tilted>0</tilted></feature>
+            <threshold>-6.8508088588714600e-003</threshold>
+            <left_val>1.</left_val>
+            <right_val>-1.0000150203704834e+000</right_val></_></_></trees>
+      <stage_threshold>1.</stage_threshold>
+      <parent>0</parent>
+      <next>-1</next></_>
+    <_>
+      <!-- stage 2 -->
+      <trees>
+        <_>
+          <!-- tree 0 -->
+          <_>
+            <!-- root node -->
+            <feature>
+              <rects>
+                <_>
+                  11 21 18 12 -1.</_>
+                <_>
+                  17 25 6 4 9.</_></rects>
+              <tilted>0</tilted></feature>
+            <threshold>7.1820937097072601e-002</threshold>
+            <left_val>-1.</left_val>
+            <right_node>1</right_node></_>
+          <_>
+            <!-- node 1 -->
+            <feature>
+              <rects>
+                <_>
+                  0 0 9 48 -1.</_>
+                <_>
+                  3 16 3 16 9.</_></rects>
+              <tilted>0</tilted></feature>
+            <threshold>1.5322409570217133e-002</threshold>
+            <left_val>-1.</left_val>
+            <right_val>1.</right_val></_></_></trees>
+      <stage_threshold>1.</stage_threshold>
+      <parent>1</parent>
+      <next>-1</next></_></stages></_7_of_clubs>
+</opencv_storage>

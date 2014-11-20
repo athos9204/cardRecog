@@ -1,5 +1,8 @@
 package hu.uszeged.sci.kepfeldolgozas.view;
 
+import hu.uszeged.sci.kepfeldolgozas.Main;
+import hu.uszeged.sci.kepfeldolgozas.tools.RecogniseCard;
+
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.Graphics2D;
@@ -9,6 +12,7 @@ import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.util.List;
 
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
@@ -17,27 +21,29 @@ import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JTextField;
-import javax.swing.SwingUtilities;
-import javax.swing.UIManager;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
 
 public class Gui extends JPanel implements ActionListener {
 	private static final long serialVersionUID = 7162958531133238631L;
 	private static final int imageWidth = 250;
 	private static final int imageHeight = 363;
 	private static final int windowWidth = 300;
-	private static final int windowHeight = 500;
+	private static final int windowHeight = 580;
 	private JButton openButton;
 	private JButton recogniseButton;
 	private JFileChooser fc;
 	private JLabel imageLbl;
 	private JLabel textLabel;
-	private JTextField resultField;
+	private JScrollPane scrollPane;
+	private JTextArea resultField;
+	private File inputFile;
 
 	public Gui() {
 		super(new FlowLayout());
 
 		fc = new JFileChooser();
+		fc.setSelectedFile(new File("resources/PNG-cards-1.3").getAbsoluteFile());
 		openButton = new JButton("Open image...");
 		openButton.addActionListener(this);
 
@@ -49,14 +55,17 @@ public class Gui extends JPanel implements ActionListener {
 
 		textLabel = new JLabel("Recognised card:");
 
-		resultField = new JTextField(10);
+		resultField = new JTextArea(6, 15);
 		resultField.setEditable(false);
-
+		scrollPane = new JScrollPane(resultField, JScrollPane.VERTICAL_SCROLLBAR_ALWAYS,
+	            JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+		scrollPane.setSize(400, 70);
+		
 		add(openButton);
 		add(recogniseButton);
 		add(imageLbl);
 		add(textLabel);
-		add(resultField);
+		add(scrollPane);
 
 		loadIcon(loadImageFromFile(new File("resources/no-available-image.png")));
 	}
@@ -65,11 +74,15 @@ public class Gui extends JPanel implements ActionListener {
 		if (e.getSource() == openButton) {
 			int returnVal = fc.showOpenDialog(this);
 			if (returnVal == JFileChooser.APPROVE_OPTION) {
-				File file = fc.getSelectedFile();
-				loadIcon(loadImageFromFile(file));
+				inputFile = fc.getSelectedFile();
+				loadIcon(loadImageFromFile(inputFile));
 				recogniseButton.setEnabled(true);
-			} else if (e.getSource() == recogniseButton) {
-				//TODO ide jön a felismerés meghívása
+			}
+		} else if (e.getSource() == recogniseButton) {
+			List<String> results = RecogniseCard.recogniseAll(Main.getHaarClassifiers(), inputFile);
+			resultField.setText("");
+			for (String string : results) {
+				resultField.append(string + "\n");
 			}
 		}
 	}
@@ -78,23 +91,14 @@ public class Gui extends JPanel implements ActionListener {
 	 * Create the GUI and show it. For thread safety, this method should be
 	 * invoked from the event dispatch thread.
 	 */
-	private static void createAndShowGUI() {
-		JFrame frame = new JFrame("FileChooserDemo");
+	public void createAndShowGUI() {
+		JFrame frame = new JFrame("Card recogniser");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.add(new Gui());
 		frame.setResizable(false);
 		frame.setPreferredSize(new Dimension(windowWidth, windowHeight));
 		frame.pack();
 		frame.setVisible(true);
-	}
-
-	public static void main(String[] args) {
-		SwingUtilities.invokeLater(new Runnable() {
-			public void run() {
-				UIManager.put("swing.boldMetal", Boolean.FALSE);
-				createAndShowGUI();
-			}
-		});
 	}
 
 	private void loadIcon(BufferedImage image) {
