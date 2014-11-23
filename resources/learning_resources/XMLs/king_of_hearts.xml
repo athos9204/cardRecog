@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<opencv_storage>
+<king_of_hearts type_id="opencv-haar-classifier">
+  <size>
+    40 58</size>
+  <stages>
+    <_>
+      <!-- stage 0 -->
+      <trees>
+        <_>
+          <!-- tree 0 -->
+          <_>
+            <!-- root node -->
+            <feature>
+              <rects>
+                <_>
+                  0 9 39 39 -1.</_>
+                <_>
+                  13 22 13 13 9.</_></rects>
+              <tilted>0</tilted></feature>
+            <threshold>-7.5261741876602173e-001</threshold>
+            <left_val>1.</left_val>
+            <right_node>1</right_node></_>
+          <_>
+            <!-- node 1 -->
+            <feature>
+              <rects>
+                <_>
+                  0 0 2 1 -1.</_>
+                <_>
+                  1 0 1 1 2.</_></rects>
+              <tilted>0</tilted></feature>
+            <threshold>-7.1380782173946500e-004</threshold>
+            <left_val>0.</left_val>
+            <right_val>-1.</right_val></_></_></trees>
+      <stage_threshold>1.</stage_threshold>
+      <parent>-1</parent>
+      <next>-1</next></_>
+    <_>
+      <!-- stage 1 -->
+      <trees>
+        <_>
+          <!-- tree 0 -->
+          <_>
+            <!-- root node -->
+            <feature>
+              <rects>
+                <_>
+                  11 8 18 21 -1.</_>
+                <_>
+                  11 15 18 7 3.</_></rects>
+              <tilted>0</tilted></feature>
+            <threshold>-4.1693121194839478e-002</threshold>
+            <left_node>1</left_node>
+            <right_val>-1.0000050067901611e+000</right_val></_>
+          <_>
+            <!-- node 1 -->
+            <feature>
+              <rects>
+                <_>
+                  0 0 28 20 -1.</_>
+                <_>
+                  0 0 14 10 2.</_>
+                <_>
+                  14 10 14 10 2.</_></rects>
+              <tilted>0</tilted></feature>
+            <threshold>-6.5809399820864201e-003</threshold>
+            <left_val>1.</left_val>
+            <right_val>-1.0000079870223999e+000</right_val></_></_></trees>
+      <stage_threshold>1.</stage_threshold>
+      <parent>0</parent>
+      <next>-1</next></_></stages></king_of_hearts>
+</opencv_storage>

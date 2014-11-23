@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<opencv_storage>
+<_5_of_diamonds type_id="opencv-haar-classifier">
+  <size>
+    40 58</size>
+  <stages>
+    <_>
+      <!-- stage 0 -->
+      <trees>
+        <_>
+          <!-- tree 0 -->
+          <_>
+            <!-- root node -->
+            <feature>
+              <rects>
+                <_>
+                  9 24 14 4 -1.</_>
+                <_>
+                  9 24 7 2 2.</_>
+                <_>
+                  16 26 7 2 2.</_></rects>
+              <tilted>0</tilted></feature>
+            <threshold>-5.0848531536757946e-003</threshold>
+            <left_val>1.</left_val>
+            <right_node>1</right_node></_>
+          <_>
+            <!-- node 1 -->
+            <feature>
+              <rects>
+                <_>
+                  0 0 2 1 -1.</_>
+                <_>
+                  1 0 1 1 2.</_></rects>
+              <tilted>0</tilted></feature>
+            <threshold>-7.1380782173946500e-004</threshold>
+            <left_val>0.</left_val>
+            <right_val>-1.</right_val></_></_></trees>
+      <stage_threshold>1.</stage_threshold>
+      <parent>-1</parent>
+      <next>-1</next></_>
+    <_>
+      <!-- stage 1 -->
+      <trees>
+        <_>
+          <!-- tree 0 -->
+          <_>
+            <!-- root node -->
+            <feature>
+              <rects>
+                <_>
+                  12 25 16 7 -1.</_>
+                <_>
+                  16 25 8 7 2.</_></rects>
+              <tilted>0</tilted></feature>
+            <threshold>-3.0213639140129089e-002</threshold>
+            <left_val>1.</left_val>
+            <right_node>1</right_node></_>
+          <_>
+            <!-- node 1 -->
+            <feature>
+              <rects>
+                <_>
+                  0 0 1 36 -1.</_>
+                <_>
+                  0 18 1 18 2.</_></rects>
+              <tilted>0</tilted></feature>
+            <threshold>1.3107590377330780e-002</threshold>
+            <left_val>-1.</left_val>
+            <right_val>1.0000150203704834e+000</right_val></_></_></trees>
+      <stage_threshold>1.</stage_threshold>
+      <parent>0</parent>
+      <next>-1</next></_>
+    <_>
+      <!-- stage 2 -->
+      <trees>
+        <_>
+          <!-- tree 0 -->
+          <_>
+            <!-- root node -->
+            <feature>
+              <rects>
+                <_>
+                  14 35 12 18 -1.</_>
+                <_>
+                  14 41 12 6 3.</_></rects>
+              <tilted>0</tilted></feature>
+            <threshold>-3.0378069728612900e-002</threshold>
+            <left_node>1</left_node>
+            <right_val>-1.0000050067901611e+000</right_val></_>
+          <_>
+            <!-- node 1 -->
+            <feature>
+              <rects>
+                <_>
+                  0 18 22 24 -1.</_>
+                <_>
+                  0 26 22 8 3.</_></rects>
+              <tilted>0</tilted></feature>
+            <threshold>1.3737630099058151e-002</threshold>
+            <left_val>1.</left_val>
+            <right_val>-1.0000150203704834e+000</right_val></_></_></trees>
+      <stage_threshold>1.</stage_threshold>
+      <parent>1</parent>
+      <next>-1</next></_></stages></_5_of_diamonds>
+</opencv_storage>

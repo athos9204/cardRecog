@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<opencv_storage>
+<king_of_spades type_id="opencv-haar-classifier">
+  <size>
+    40 58</size>
+  <stages>
+    <_>
+      <!-- stage 0 -->
+      <trees>
+        <_>
+          <!-- tree 0 -->
+          <_>
+            <!-- root node -->
+            <feature>
+              <rects>
+                <_>
+                  0 0 39 54 -1.</_>
+                <_>
+                  13 18 13 18 9.</_></rects>
+              <tilted>0</tilted></feature>
+            <threshold>-1.1178779602050781e+000</threshold>
+            <left_val>1.</left_val>
+            <right_node>1</right_node></_>
+          <_>
+            <!-- node 1 -->
+            <feature>
+              <rects>
+                <_>
+                  0 0 2 1 -1.</_>
+                <_>
+                  1 0 1 1 2.</_></rects>
+              <tilted>0</tilted></feature>
+            <threshold>-7.1380782173946500e-004</threshold>
+            <left_val>0.</left_val>
+            <right_val>-1.</right_val></_></_></trees>
+      <stage_threshold>1.</stage_threshold>
+      <parent>-1</parent>
+      <next>-1</next></_>
+    <_>
+      <!-- stage 1 -->
+      <trees>
+        <_>
+          <!-- tree 0 -->
+          <_>
+            <!-- root node -->
+            <feature>
+              <rects>
+                <_>
+                  20 16 20 18 -1.</_>
+                <_>
+                  25 21 10 18 2.</_></rects>
+              <tilted>1</tilted></feature>
+            <threshold>-1.3989180326461792e-001</threshold>
+            <left_node>1</left_node>
+            <right_val>-1.0000040531158447e+000</right_val></_>
+          <_>
+            <!-- node 1 -->
+            <feature>
+              <rects>
+                <_>
+                  0 0 12 42 -1.</_>
+                <_>
+                  4 14 4 14 9.</_></rects>
+              <tilted>0</tilted></feature>
+            <threshold>4.8833838663995266e-003</threshold>
+            <left_val>-1.</left_val>
+            <right_val>1.</right_val></_></_></trees>
+      <stage_threshold>1.</stage_threshold>
+      <parent>0</parent>
+      <next>-1</next></_></stages></king_of_spades>
+</opencv_storage>
